@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addTodo, getTodos } from "../api/todos";
+import { addTodo } from "../api/todos";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 // 리액트 쿼리(tanstack query) v3까지는 리액트쿼리 -> v4부터는 탠스택 쿼리
