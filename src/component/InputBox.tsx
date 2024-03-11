@@ -48,7 +48,7 @@ const InputBox = () => {
           });
         }
       }
-    ); // Todos 타입으로 넣어주면 끝!
+    ); // Todos 타입으로 넣어주면 끝
   };
 
   return (
