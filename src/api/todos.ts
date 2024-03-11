@@ -1,15 +1,17 @@
 import axios from "axios";
 
-type Todos = { id: string; title: string; content: string; isDone: boolean };
+type Todo = { id: string; title: string; content: string; isDone: boolean };
 
-const getTodos = async (): Promise<Todos[]> => {
+type Todos = Todo[];
+
+const getTodos = async (): Promise<Todos> => {
   const data = await axios
     .get(`${process.env.REACT_APP_SERVER_URL}`)
     .then((response) => response.data);
   return data;
 };
 
-const addTodo = async (newTodo: Todos) => {
+const addTodo = async (newTodo: Todo) => {
   await axios.post(`${process.env.REACT_APP_SERVER_URL}`, newTodo);
 };
 
